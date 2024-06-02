@@ -25,7 +25,3 @@ artifacts:
   files:
     - '**/*' # Include all files in the artifact
   discard-paths: yes # Flatten the directory structure in the artifact
-
-cache:
-  paths:
-    - 'node_modules/**/*' # Cache `node_modules` between builds for faster installs
