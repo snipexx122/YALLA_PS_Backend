@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14 # Specify the Node.js version you want to use
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      
+  pre_build:
+    commands:
+      - echo Running pre-build phase...
+  
+  build:
+    commands:
+      - echo Running build phase...
+      - npm run build # Build your project (e.g., Webpack, Babel)
+  
+  post_build:
+    commands:
+      - echo Build completed successfully
+
+artifacts:
+  files:
+    - '**/*' # Include all files in the artifact
+  discard-paths: yes # Flatten the directory structure in the artifact
+
+cache:
+  paths:
+    - 'node_modules/**/*' # Cache `node_modules` between builds for faster installs
