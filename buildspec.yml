@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "zipping dep package"
-      - zip -r lib ../deployment_package.zip
+      - zip -r lib deployment_package.zip
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
   post_build: 
