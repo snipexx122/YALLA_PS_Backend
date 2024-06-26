@@ -1,5 +1,5 @@
 version: 0.2
-phaeses:
+phases:
   install:
     runtime-versions: 
       python: 3.12
