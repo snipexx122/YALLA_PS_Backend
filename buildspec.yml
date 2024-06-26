@@ -15,5 +15,5 @@ phases:
   post_build: 
     commands:
       - echo "updating lambda function"
-      - aws lambda update-function-code --function-name Yalla_Ps_backend --zip-file fileb://deployment_pack
+      - aws lambda update-function-code --function-name Yalla_Ps_backend --zip-file fileb://deployment_package.zip
       - echo "Done" 
